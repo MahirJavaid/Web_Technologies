@@ -1,0 +1,40 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.0em;
+}
+
+p {
+    color: black;
+    font-size: 1.25em;
+}
+
+img {
+    float: right;
+    border-radius: 100%;
+}
+
+table, th, td {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th, td {
+    background-color: aliceblue;
+    text-align: left;
+}
+
+table {
+    width: 50%;
+}
