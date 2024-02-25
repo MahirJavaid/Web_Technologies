@@ -19,8 +19,17 @@ p {
 }
 
 img {
-    float: right;
     border-radius: 100%;
+}
+
+div.info{
+    float: right;
+    padding-top: 2em;
+}
+
+li{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;
 }
 
 table, th, td {
@@ -37,4 +46,9 @@ th, td {
 
 table {
     width: 50%;
+}
+
+div.content {
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
