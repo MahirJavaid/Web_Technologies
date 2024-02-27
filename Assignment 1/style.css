@@ -22,12 +22,16 @@ img {
     border-radius: 100%;
 }
 
-div.info{
+div.info {
     float: right;
     padding-top: 2em;
 }
 
-li{
+div.profiles {
+    padding-top: 0.1em;
+}
+
+li {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25em;
 }
