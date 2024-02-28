@@ -3,6 +3,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 0;
 }
 
 header {
@@ -25,10 +26,28 @@ img {
 div.info {
     float: right;
     padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-left: 1px solid;
+}
+
+div.pic{
+    margin: auto;
+    width: fit-content;
 }
 
 div.profiles {
     padding-top: 0.1em;
+}
+
+div.content {
+    margin-top: 2em;
+    padding-bottom: 3em;
 }
 
 li {
@@ -50,9 +69,4 @@ th, td {
 
 table {
     width: 50%;
-}
-
-div.content {
-    margin-top: 2em;
-    margin-bottom: 3em;
 }
