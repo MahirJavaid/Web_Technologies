@@ -1,8 +1,8 @@
 body {
-    background-color: aliceblue;
+    background-color: white;
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 0;
 }
 
@@ -23,17 +23,60 @@ img {
     border-radius: 100%;
 }
 
+a:hover {
+    color: red;
+}
+
+.profiles:hover img{
+    transform: scale(1.2);
+}
+
+#s1 {
+    margin-left: 5em;
+}
+
+#s2 {
+    margin-left: 4.25em;
+}
+
+#s3 {
+    margin-left: 5.3em;
+}
+
+#s4 {
+    margin-left: 5.3em;
+}
+
+#s5 {
+    margin-left: 2.9em;
+}
+
+#s6 {
+    margin-left: 4.4em;
+}
+
+#s7 {
+    margin-left: 4.2em;
+}
+
+#s8 {
+    margin-left: 4.8em;
+}
+
 div.info {
     float: right;
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 1em;
+    padding-right: 1em;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     bottom: 0;
     overflow: hidden;
     border-left: 1px solid;
+    /* border: 1px solid; */
+    /* background-color: #13678A; */
 }
 
 div.pic{
