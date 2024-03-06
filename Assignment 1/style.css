@@ -23,6 +23,18 @@ img {
     border-radius: 100%;
 }
 
+progress {
+    border: 0px solid;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+}
+
+progress::-webkit-progress-value {
+    background-color: darkturquoise;
+}
+
 a:hover {
     color: red;
 }
@@ -91,6 +103,102 @@ div.profiles {
 div.content {
     margin-top: 2em;
     padding-bottom: 3em;
+}
+
+.p1 {
+    animation: load1 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+  
+@keyframes load1 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p2 {
+    animation: load2 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load2 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p3 {
+    animation: load3 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load3 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p4 {
+    animation: load4 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load4 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p5 {
+    animation: load5 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load5 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p6 {
+    animation: load6 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load6 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p7 {
+    animation: load7 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load7 {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+
+.p8 {
+    animation: load8 3s normal forwards;
+    text-align: center;
+    height: 20px;
+    width: 0px;
+}
+
+@keyframes load8 {
+    0% { width: 0; }
+    100% { width: 20%; }
 }
 
 li {
