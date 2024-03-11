@@ -1,0 +1,42 @@
+div.container-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    background-color: black;
+    color: white;
+}
+
+div.menu {
+    position: fixed;
+    top: 1em;
+    right: 0;
+}
+
+.navbar {
+    top: 0;
+    color: white;
+    background-color: black;
+    position: relative;
+}
+
+div.menu-div {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+li.items {
+    display: inline;
+}
+
+a.links {
+    text-decoration: none;
+    color: white;
+}
+
+a.links:hover {
+    text-decoration: underline;
+    color: red;
+}
