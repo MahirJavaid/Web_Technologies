@@ -1,0 +1,35 @@
+nav {
+    background-color: black;
+    color: white;
+    height: 4em;
+}
+
+div.data {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3em;
+    text-align: left;
+}
+
+div.card {
+    margin: auto;
+    width: 60em;
+}
+
+input.form {
+    width: 55em;
+    height: 3em;
+}
+
+div.form-group {
+    margin-top: 1em;
+}
+
+.btn-primary {
+    margin-top: 1em;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    width: 10em;
+    height: 2em;
+}
