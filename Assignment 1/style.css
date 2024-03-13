@@ -41,10 +41,6 @@ a:hover {
     color: red;
 }
 
-.profiles:hover img{
-    transform: scale(1.2);
-}
-
 #s1 {
     margin-left: 5em;
 }
@@ -105,6 +101,15 @@ div.profiles {
 
 div.text p {
     color: white;
+}
+
+div.prof {
+    display: inline;
+    transition: transform 2s;
+}
+
+div.prof img:hover {
+    transform: scale(1.5);
 }
 
 div.content {
