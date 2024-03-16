@@ -1,9 +1,8 @@
 body {
     background-color: aliceblue;
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 0;
+    margin: 2% 10%;
+    border: 3px solid black;
 }
 
 header {
@@ -113,6 +112,7 @@ div.prof img:hover {
 }
 
 div.content {
+    padding-left: 2em;
     padding-bottom: 3em;
 }
 
