@@ -5,8 +5,6 @@ nav {
 }
 
 div.data {
-    margin-left: 15%;
-    margin-right: 15%;
     margin-top: 3em;
     text-align: left;
 }
@@ -23,6 +21,10 @@ input.form {
 
 div.form-group {
     margin-top: 1em;
+}
+
+.btn-edit {
+    color: white;
 }
 
 .btn-primary {
