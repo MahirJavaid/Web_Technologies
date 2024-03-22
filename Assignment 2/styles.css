@@ -1,0 +1,66 @@
+nav {
+    background-color: black;
+    color: white;
+    height: 4em;
+}
+
+div.card {
+    margin: auto;
+    width: 60em;
+}
+
+input.form {
+    width: 55em;
+    height: 3em;
+}
+
+div.form-group {
+    margin-top: 0.5em;
+}
+
+label {
+    display: block;
+}
+
+#message {
+    height: 6em;
+}
+
+.btn-primary {
+    margin-top: 1em;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    width: 10em;
+    height: 2em;
+}
+
+.error {
+    display: block !important;
+    border: 5px solid red;
+    width: 30em;
+    height: 3em;
+    padding-left: 5em;
+    padding-top: 0.3em;
+}
+
+#hide {
+    display: none;
+    margin: auto;
+    font-weight: bold;
+}
+
+.success {
+    display: block !important;
+    border: 5px solid green;
+    width: 30em;
+    height: 3em;
+    padding-left: 8em;
+    padding-top: 0.3em;
+}
+
+#hidden {
+    display: none;
+    margin: auto;
+    font-weight: bold;
+}
