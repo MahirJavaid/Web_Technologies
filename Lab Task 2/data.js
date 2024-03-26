@@ -50,7 +50,6 @@ function editBtnClicked(event) {
         method: "GET",
         success: function (data) {
             console.log(data);
-            //$("#clearBtn").show();
             $("#story").val(data.title);
             $("#description").val(data.content);
             $("#creation").html("Update");
@@ -63,13 +62,11 @@ function editBtnClicked(event) {
 }
 
 function handleSubmission(event) {
-    console.log("joke");
     event.preventDefault();
     let storyId = $("#creation").attr("data-id");
     var title = $("#story").val();
     var content = $("#description").val();
     if (storyId != null) {
-        console.log("hello")
         $.ajax({
             url: "https://usmanlive.com/wp-json/api/stories/" + storyId,
             method: "PUT",
