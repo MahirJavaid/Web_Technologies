@@ -1,0 +1,9 @@
+h1 {
+    padding: 10px;
+    border: 2px solid blue;
+    size: 10em;
+}
+
+ul, li {
+    display: inline;
+}
