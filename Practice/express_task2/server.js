@@ -1,7 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const server = express();
+let server = express();
+let Student = require("./models/Student");
+server.use(express.json());
+
+server.post("/api/students", async function(req, res){
+    let data = req.body;
+    
+})
 
 server.get("/api/students", function(req, res) {
     let students = [

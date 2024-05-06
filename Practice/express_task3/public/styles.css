@@ -1,7 +1,7 @@
 h1 {
-    padding: 10px;
+    padding: 5px;
     border: 2px solid blue;
-    size: 10em;
+    border-radius: 5px;
 }
 
 ul, li {
