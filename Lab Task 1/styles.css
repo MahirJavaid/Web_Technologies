@@ -66,3 +66,53 @@ a.links:hover {
     text-decoration: underline;
     color: red;
 }
+
+#MyCarousel {
+    height: 50em;
+    width: 100%;
+}
+
+#footer-img {
+    width: 50%;
+    height: 20em;
+}
+
+footer {
+    margin-top: 4em;
+    margin-bottom: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.foot-div {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#f-div1 {
+    margin-top: 0;
+}
+
+#f-div2 {
+    padding-top: 3em;
+    margin-bottom: 0;
+}
+
+#f-div2 h1, h2, p {
+    color: white;
+}
+
+#f-div2 h1, h2 {
+    margin-bottom: 1em;
+}
+
+#f-div2 a {
+    text-decoration: none;
+    color: white;
+}
+
+#f-div2 a:hover {
+    text-decoration: underline;
+    color: red;
+}

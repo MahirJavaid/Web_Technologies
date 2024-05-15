@@ -35,3 +35,97 @@ div.form-group {
     width: 10em;
     height: 2em;
 }
+
+a.links {
+    text-decoration: none;
+    color: white;
+}
+
+a.links:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+div.container-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.8em;
+    background-color: black;
+    color: white;
+}
+
+div.menu {
+    position: fixed;
+    top: 1.5em;
+    right: 0;
+}
+
+.navbar {
+    top: 0;
+    color: white;
+    background-color: black;
+    position: relative;
+}
+
+div.menu-div {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+li.items {
+    display: inline;
+}
+
+#logo {
+    width: 75px;
+    height: 75px;
+}
+
+#footer-img {
+    width: 50%;
+    height: 20em;
+}
+
+footer {
+    margin-top: 4em;
+    margin-bottom: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.foot-div {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#f-div1 {
+    margin-top: 0;
+    align-items: center;
+}
+
+#f-div2 {
+    padding-top: 3em;
+    margin-bottom: 0;
+}
+
+#f-div2 h1, h2, p {
+    color: white;
+}
+
+#f-div2 h1, h2 {
+    margin-bottom: 1em;
+}
+
+#f-div2 a {
+    text-decoration: none;
+    color: white;
+}
+
+#f-div2 a:hover {
+    text-decoration: underline;
+    color: red;
+}
