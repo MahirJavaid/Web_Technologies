@@ -125,3 +125,25 @@ footer {
     text-decoration: underline;
     color: red;
 }
+
+li.social {
+    display: inline;
+}
+
+.info {
+    margin-bottom: 1em;
+}
+
+div.socials {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ul.social-list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#twitter {
+    margin-left: 0.5em;
+}
