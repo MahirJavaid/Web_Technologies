@@ -147,3 +147,87 @@ ul.social-list {
 #twitter {
     margin-left: 0.5em;
 }
+
+section.pic {
+    margin-top: 3.8em;
+    margin-bottom: 1em;
+}
+
+#img1 {
+    width: 100%;
+    height: 40em;
+}
+
+#prods {
+    padding: 50px 0;
+}
+
+.title {
+    margin-bottom: 1em;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin: 1%; */
+    overflow: hidden;
+}
+
+.product-img {
+    max-width: 100%;
+    height: 225px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.products-link {
+    align-items: center;
+    margin-top: 12em;
+    margin-left: 2em;
+}
+
+#blog {
+    padding: 50px 0;
+}
+
+.news-img {
+    float: right;
+    display: inline;
+    width: 25%;
+    height: 180px;
+}
+
+.article-image {
+    float: right;
+    display: inline;
+    overflow: hidden;
+}
+
+.articles-link {
+    margin-top: 2em;
+    margin-left: 30em;
+}
+
+#n1, #n2 {
+    margin-bottom: 1em;
+}
