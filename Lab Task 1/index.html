@@ -21,8 +21,9 @@
                     <div class="menu">
                         <ul class="list">
                             <div class="menu-div"><li class="items"><a class="links" href="index.html">Home</a></li></div>
-                            <div class="menu-div"><li class="items"><a class="links" href="#">Products</a></li></div>
-                            <div class="menu-div"><li class="items"><a class="links" href="#">About Us</a></li></div>
+                            <div class="menu-div"><li class="items"><a class="links" href="products.html">Products</a></li></div>
+                            <div class="menu-div"><li class="items"><a class="links" href="blog.html">Blog</a></li></div>
+                            <div class="menu-div"><li class="items"><a class="links" href="about.html">About Us</a></li></div>
                             <div class="menu-div"><li class="items"><a class="links" href="../Assignment 2/contact.html">Contact Us</a></li></div>
                         </ul>
                     </div>
@@ -107,22 +108,22 @@
                             <img src="Images/bat.jpg" alt="Cricket Bat" class="product-img">
                             <h3>Cricket Bat</h3>
                             <p>$10.99</p>
-                            <button>Add to Cart</button>
+                            <button class="mybtn">Add to Cart</button>
                         </div>
                         <div class="card">
                             <img src="Images/football.jpg" alt="Football" class="product-img">
                             <h3>Foot Ball</h3>
                             <p>$4.99</p>
-                            <button>Add to Cart</button>
+                            <button class="mybtn">Add to Cart</button>
                         </div>
                         <div class="card">
                             <img src="Images/helmet.jpg" alt="Cricket Helmet" class="product-img">
                             <h3>Cricket Helmet</h3>
                             <p>$8.99</p>
-                            <button>Add to Cart</button>
+                            <button class="mybtn">Add to Cart</button>
                         </div>
                         <div class="products-link">
-                            <a href="" id="product-link">View All &#x2192</a>
+                            <a href="products.html" id="product-link" class="link-to-page">View All &#x2192</a>
                         </div>
                     </div>
                 </div>
@@ -133,29 +134,29 @@
                         <h1>Our Blog</h1>
                     </div>
                     <div class="news">
-                        <div id="n1" class="card">
+                        <div id="n1" class="card news-card">
                             <h3>Pak vs Eng T20 series</h3>
                             <p>
-                                The T20 series between two world champions, Pakistan and England, is going to start soon.
+                                The T20 series between two world champions, 
+                                <img src="Images/news1.jpg" alt="Article 1" class="news-img"> 
+                                Pakistan and England, is going to start soon. 
                                 The first T20I between the two teams will be played on 22 May 2024, in Leeds.
                             </p>
-                            <div class="article-image">
-                                <img src="Images/news1.jpg" alt="Article 1" class="news-img">
-                            </div>
                         </div>
-                        <div id="n2" class="card">
-                            <h3>ICC T20 WC 2024</h3>
+                        <div id="n2" class="card news-card">
+                            <h3>UEFA Champions League Final</h3>
                             <p>
-                                The ICC T20 World Cup 2024 is set to commence from 2 June 2024. 
-                                The countdown for fans has already started. Warm up fixtures have also been announced. 
-                                This will be the biggest T20 World Cup in history featuring 20 teams.
+                                The UEFA Champions League Final 2024 is set to be played 
+                                <img src="Images/news2.jpg" alt="Article 2" class="news-img"> 
+                                on 2 June 2024 in London. The two finalists were confirmed as 
+                                Borussia Dortmund defeated Paris Saint German in semi final, 
+                                and Real Madrid completed another dream comeback to beat 
+                                Bayern Munich. Both will face of each other and it is 
+                                guaranted to be a spectacle for the fans.
                             </p>
-                            <div class="article-image">
-                                <img src="Images/news2.jpg" alt="Article 2" class="news-img">
-                            </div>
                         </div>
                         <div class="articles-link">
-                            <a href="" id="news-link">See More &#x2192</a>
+                            <a href="blog.html" id="news-link" class="link-to-page">See More &#x2192</a>
                         </div>
                     </div>
                 </div>
@@ -167,34 +168,36 @@
                     </div>
                 </div>
                 <div class="container description">
-                    <p>Sports for All aims to spread the love of sports world wide.</p>
-                    <a href="">Read More &#x2192</a>
+                    <p>
+                        Sports for All aims to spread the love of sports world wide.
+                        The company was established in 2024, with the target of providing the best sporting
+                        goods to all people and providing excellent news coverage of every sport for fans.
+                        <a href="about.html" class="link-to-page">Read More &#x2192</a>
+                    </p>
                 </div>
             </section>
         </main>
         <footer>
-            <footer>
-                <div id="f-div1" class="foot-div">
-                    <img src="Images/Logo.png" alt="Our Logo" id="footer-img">
-                    <h2>Sports For All</h2>
+            <div id="f-div1" class="foot-div">
+                <img src="Images/Logo.png" alt="Our Logo" id="footer-img">
+                <h2>Sports For All</h2>
+            </div>
+            <div id="f-div2" class="foot-div">
+                <div class="info">
+                    <h1>Company Information</h1>
+                    <p>Location: 123, Bellingham street, UK</p>
+                    <p>Contact No: +123 456 789</p>
+                    <p>Email: sportsforall@spa.com</p>
+                    <a href="../Lab Task 2/crud.html">Check our stories</a>
                 </div>
-                <div id="f-div2" class="foot-div">
-                    <div class="info">
-                        <h1>Company Information</h1>
-                        <p>Location: 123, Bellingham street, UK</p>
-                        <p>Contact No: +123 456 789</p>
-                        <p>Email: sportsforall@spa.com</p>
-                        <a href="../Lab Task 2/crud.html">Check our stories</a>
-                    </div>
-                    <div class="socials">
-                        <ul class="social-list">
-                            <li class="social"><img src="../Lab Task 1/Images/fb icon.png" id="fb" alt="fb link"></li>
-                            <li class="social"><img src="../Lab Task 1/Images/insta icon.png" id="insta" alt="insta link" width="35px" height="35px"></li>
-                            <li class="social"><img src="../Lab Task 1/Images/twitter icon.png" id="twitter" alt="twitter link" width="35px" height="35px"></li>
-                        </ul>
-                    </div>
+                <div class="socials">
+                    <ul class="social-list">
+                        <li class="social"><img src="../Lab Task 1/Images/fb icon.png" id="fb" alt="fb link"></li>
+                        <li class="social"><img src="../Lab Task 1/Images/insta icon.png" id="insta" alt="insta link" width="35px" height="35px"></li>
+                        <li class="social"><img src="../Lab Task 1/Images/twitter icon.png" id="twitter" alt="twitter link" width="35px" height="35px"></li>
+                    </ul>
                 </div>
-            </footer>
+            </div>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
