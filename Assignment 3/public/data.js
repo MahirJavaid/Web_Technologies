@@ -80,7 +80,6 @@ function handleSubmission(event) {
             },
         });
     } else {
-        console.log("hi");
         $.ajax({
             url: "https://usmanlive.com/wp-json/api/stories",
             method: "POST",
