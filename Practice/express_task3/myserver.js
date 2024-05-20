@@ -1,15 +1,27 @@
 const express = require("express");
 const mongoose = require("mongoose");
-let server = express();
-let Student = require("./models/Student");
+const server = express();
+const ejsLayouts = require("express-ejs-layouts");
+const router = require("./routes/api/students");
+
 server.use(express.json());
 server.set("view engine", "ejs");
 server.use(express.static("public"));
-let ejsLayouts = require("express-ejs-layouts");
 server.use(ejsLayouts);
+server.use(router);
 
-let studentsAPIRouter = require("./routes/api/students");
-server.use = (studentsAPIRouter);
+// const express = require("express");
+// const mongoose = require("mongoose");
+// let server = express();
+// let Student = require("./models/Student");
+// server.use(express.json());
+// server.set("view engine", "ejs");
+// server.use(express.static("public"));
+// let ejsLayouts = require("express-ejs-layouts");
+// server.use(ejsLayouts);
+
+// let router = require("./routes/api/students");
+// server.use = ("/api", router);
 
 server.get("/", async (req, res) => {
     res.render("homepage");
