@@ -6,4 +6,4 @@ let studentSchema = mongoose.Schema({
 });
 
 let Student = mongoose.model("Student", studentSchema);
-module.exports(Student);
+module.exports = Student;
