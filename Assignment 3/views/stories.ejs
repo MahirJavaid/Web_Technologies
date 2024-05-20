@@ -1,0 +1,27 @@
+<main>
+    <section class="first-section">
+        <div class="card mt-5 my-form">
+            <div class="card-header">
+                <h1 class="fs-2">CRUD operations</h1>
+            </div>
+            <div class="card-body">
+                <form id="createform">
+                    <div class="form-group">
+                        <label id="l1" for="story">Story Name:</label>
+                        <input id="story" class="form" type="text" placeholder="new story">
+                    </div>
+                    <div class="form-group">
+                        <label id="l2" for="description">Story Content:</label>
+                        <input id="description" class="form" type="text" placeholder="add story content">
+                    </div>
+                    <button id="creation" type="submit" class="btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+        <div class="data">
+            <h1>Created Stories</h1>
+            <hr>
+        </div>
+        <div id="storiesList"></div>
+    </section>
+</main>
