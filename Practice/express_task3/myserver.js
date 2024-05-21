@@ -40,7 +40,7 @@ server.listen(4000, function () {
 });
 
 mongoose.connect("mongodb://localhost:27017/studentDB").then(function() {
-    console.log("Connected to DB");
+    console.log("Connected to student DB");
 }).catch(function (){
     console.log("Error connecting to database");
 });
