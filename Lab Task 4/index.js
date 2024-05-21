@@ -3,11 +3,17 @@ const mongoose = require("mongoose");
 const server = express();
 const ejsLayouts = require("express-ejs-layouts");
 const expressSession = require("express-session");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 const checkAuth = require("./middlewares/session-auth");
 const mainSite = require("./middlewares/main-site");
+const checkAdmin = require("./middlewares/check-admin");
+const jwtAuthentication = require("./middlewares/jwt-authentication");
 const Product = require("./models/Product");
 const User = require("./models/User");
 const router = require("./routes/api/products");
+
+dotenv.config();
 
 server.use(express.json());
 server.set("view engine", "ejs");
@@ -59,6 +65,8 @@ server.post("/login", async (req, res) => {
     if (!user) return res.redirect("register");
     if (user.password != req.body.password) return res.redirect("login");
     req.session.user = user;
+    // const token = jwt.sign({ _id: user._id, isAdmin: user.isAdmin }, process.env.JWT_SECRET || 'your_secret_key');
+    // res.header("Authorization", "Bearer " + token).send({ token });
     return res.redirect("/");
 });
 

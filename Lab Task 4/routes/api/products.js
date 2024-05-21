@@ -1,6 +1,9 @@
 const express = require("express");
 let router = express.Router();
 let Product = require("../../models/Product");
+let checkAuth = require("../../middlewares/session-auth");
+let mainSite = require("../../middlewares/main-site");
+router.use(mainSite);
 
 router.get("/api/products", async function (req, res) {
     let products = await Product.find();
