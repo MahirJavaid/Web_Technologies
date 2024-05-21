@@ -9,7 +9,7 @@ server.use(express.static("public"));
 server.set("view engine", "ejs");
 
 server.get("/", async (req, res) => {
-    res.render("homepage.ejs");
+    res.render("homepage");
 });
 
 server.get("/products", async (req, res) => {

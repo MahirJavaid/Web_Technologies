@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const server = express();
 const ejsLayouts = require("express-ejs-layouts");
+const Product = require("./models/Product");
 const router = require("./routes/api/products");
 
 server.use(express.json());
@@ -10,12 +11,9 @@ server.use(express.static("public"));
 server.use(ejsLayouts);
 server.use(router);
 
-server.get("/", async (req, res) => {
-    res.render("homepage");
-});
-
 server.get("/products", async (req, res) => {
-    res.render("products");
+    let products = await Product.find();
+    res.render("products", {products});
 });
 
 server.get("/blog", async (req, res) => {
@@ -34,12 +32,22 @@ server.get("/stories", async (req, res) => {
     res.render("stories");
 });
 
+server.get("/:page?", async (req, res) => {
+    let page = req.params.page ? req.params.page : 1;
+    let pageSize = 3;
+    let skip = (page - 1) * pageSize;
+    let totalProducts = await Product.countDocuments();
+    let totalPages = Math.ceil(totalProducts / pageSize);
+    let products = await Product.find().limit(pageSize).skip(skip);
+    res.render("homepage", {products, page, pageSize, totalProducts, totalPages});
+});
+
 server.listen(4000, function() {
     console.log("Server started listening at port 4000");
 });
 
 mongoose.connect("mongodb://localhost:27017/productsDB").then(function () {
-    console.log("Connected to DB");
+    console.log("Connected to product DB");
 }).catch(function () {
     console.log("Error connecting to database");
 });
