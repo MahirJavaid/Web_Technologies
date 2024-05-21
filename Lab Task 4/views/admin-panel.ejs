@@ -1,0 +1,13 @@
+<main>
+    <section id="about-us" class="first-section">
+        <div class="container">
+            <div class="title">
+                <% if (!user.isAdmin) { %>
+                    <h1>You do not have access!</h1>
+                <% } else { %>
+                    <h1>Hi admin</h1>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</main>

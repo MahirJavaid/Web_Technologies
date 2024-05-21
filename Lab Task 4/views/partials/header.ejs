@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <img id="logo" src="Images\Logo.png" alt="Our Logo">
+            <div class="menu">
+                <ul class="list">
+                    <div class="menu-div"><li class="items"><a class="links" href="/">Home</a></li></div>
+                    <div class="menu-div"><li class="items"><a class="links" href="/products">Products</a></li></div>
+                    <div class="menu-div"><li class="items"><a class="links" href="/blog">Blog</a></li></div>
+                    <div class="menu-div"><li class="items"><a class="links" href="/about-us">About Us</a></li></div>
+                    <div class="menu-div"><li class="items"><a class="links" href="/contact-us">Contact Us</a></li></div>
+                    <% if (user) { %>
+                        <div class="menu-div"><li class="items"><button id="logout-btn" class="mybtn"><a class="btn-link" href="/logout">Logout</a></button></li></div>
+                    <% } else { %>
+                        <div class="menu-div"><li class="items"><button id="login-btn" class="mybtn"><a class="btn-link" href="/login">Login</a></button></li></div>
+                        <div class="menu-div"><li class="items"><button id="register-btn" class="mybtn"><a class="btn-link" href="/register">Register</a></button></li></div>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
