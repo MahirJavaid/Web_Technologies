@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const server = express();
 const ejsLayouts = require("express-ejs-layouts");
 const expressSession = require("express-session");
+const cookieParser = require("cookie-parser");
+const { cookie } = require("express/lib/response");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const checkAuth = require("./middlewares/session-auth");
@@ -20,6 +22,7 @@ server.set("view engine", "ejs");
 server.use(express.urlencoded({extended : true}));
 server.use(express.static("public"));
 server.use(ejsLayouts);
+server.use(cookieParser());
 server.use(expressSession({ secret: "Key to my secret"}));
 server.use(router);
 server.use(mainSite);
@@ -43,6 +46,27 @@ server.get("/contact-us", checkAuth, async (req, res) => {
 
 server.get("/stories", checkAuth, async (req, res) => {
     res.render("stories");
+});
+
+server.get("/cart", checkAuth, async (req, res) => {
+    let cart = req.cookies?.cart;
+    if (!cart) cart = [];
+  
+    let products = await Product.find({ _id: { $in: cart } });
+    res.render("cart", { products });
+});
+
+server.get("/add-to-cart/:id", async (req, res) => {
+    let cart = req.cookies?.cart;
+    if (!cart) cart = [];
+    if(!cart.includes(req.params.id)) {
+        cart.push(req.params.id);
+    }
+    
+    res.cookie("cart", cart);
+  
+    // return res.send(req.cookies);
+    return res.redirect("/products");
 });
 
 server.get("/register", async (req, res) => {

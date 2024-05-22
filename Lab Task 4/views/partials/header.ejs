@@ -10,6 +10,7 @@
                     <div class="menu-div"><li class="items"><a class="links" href="/about-us">About Us</a></li></div>
                     <div class="menu-div"><li class="items"><a class="links" href="/contact-us">Contact Us</a></li></div>
                     <% if (user) { %>
+                        <div class="menu-div"><li class="items"><a class="links" href="/cart">Cart (<%= cart.length %>)</a></li></div>
                         <div class="menu-div"><li class="items"><button id="logout-btn" class="mybtn"><a class="btn-link" href="/logout">Logout</a></button></li></div>
                     <% } else { %>
                         <div class="menu-div"><li class="items"><button id="login-btn" class="mybtn"><a class="btn-link" href="/login">Login</a></button></li></div>

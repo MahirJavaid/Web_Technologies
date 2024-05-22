@@ -22,7 +22,7 @@
                         <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
                         <h3><%= products[i].name %></h3>
                         <p><%= products[i].price %></p>
-                        <button class="mybtn">Add to Cart</button>
+                        <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
                     </div>
                 <% } %>
             </div>
