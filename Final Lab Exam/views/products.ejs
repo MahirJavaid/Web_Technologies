@@ -1,0 +1,145 @@
+<main>
+    <div class="top-button">
+        <button class="mybtn"><a href="#" id="back-to-top">Back To Top</a></button>
+    </div>
+    <section id="full-products" class="first-section">
+        <div class="container">
+            <div class="title">
+                <h1>All Products</h1>
+                <p>
+                    Categories: 
+                    <a href="#cricket" class="category">Cricket</a>
+                    <a href="#football" class="category">Football</a>
+                    <a href="#tennis" class="category">Tennis</a>
+                    <a href="#badminton" class="category">Badminton</a>
+                    <a href="#basketball" class="category">Basketball</a>
+                    <a href="#volleyball" class="category">Volleyball</a>
+                </p>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <div class="card">
+                        <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                        <h3><%= products[i].name %></h3>
+                        <p><%= products[i].price %></p>
+                        <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="cricket" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Cricket Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "cricket") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="football" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Football Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "football") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="tennis" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Tennis Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "tennis") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="badminton" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Badminton Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "badminton") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="basketball" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Basketball Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "basketball") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section id="volleyball" class="new-category">
+        <div class="container">
+            <div class="title">
+                <h1>Volleyball Products</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <% if (products[i].category == "volleyball") { %>
+                        <div class="card">
+                            <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                            <h3><%= products[i].name %></h3>
+                            <p><%= products[i].price %></p>
+                            <button class="mybtn"><a class="btn-link" href="/add-to-cart/<%= products[i].id %>">Add to Cart</a></button>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</main>

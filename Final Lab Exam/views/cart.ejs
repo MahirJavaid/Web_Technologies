@@ -1,0 +1,25 @@
+<main>
+    <section id="full-products" class="first-section">
+        <div class="container">
+            <div class="title">
+                <h1>Cart</h1>
+                <p>Products that you have added will show here.</p>
+            </div>
+            <div class="products">
+                <% for(let i = 0; i < products.length; i++) { %>
+                    <div class="card">
+                        <img src= "<%= products[i].image %>" alt="Product Image" class="product-img">
+                        <h3><%= products[i].name %></h3>
+                        <p><%= products[i].price %></p>
+                        <button class="mybtn">Buy Now</button>
+                    </div>
+                <% } %>
+                <% if (products.length == 0) { %>
+                    <div>
+                        <h3>No Products in Cart</h3>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</main>

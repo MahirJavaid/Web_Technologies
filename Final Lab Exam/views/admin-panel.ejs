@@ -1,0 +1,39 @@
+<main>
+    <section id="about-us" class="first-section">
+        <div class="container">
+            <div class="title">
+                <% if (!user.isAdmin) { %>
+                    <h1>You do not have access!</h1>
+                <% } else { %>
+                    <h1>Welcome Admin</h1>
+                    <div class="card mt-5 my-form">
+                        <div class="card-header">
+                            <h1 class="fs-2">Add Product</h1>
+                        </div>
+                        <div class="card-body">
+                            <form action="/api/products" method="post" id="contactForm">
+                                <div class="form-group">
+                                    <label id="l1" for="name">Product Name: </label>
+                                    <input id="name" name="name" class="form" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label id="l2" for="price">Price: </label>
+                                    <input id="price" name="price" class="form" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label id="l3" for="category">Category: </label>
+                                    <input id="category" name="category" class="form" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label id="l4" for="image">Path to Image: </label>
+                                    <input id="image" name="image" class="form" type="text">
+                                </div>
+                                <button id="submit" type="submit" class="btn-primary" value="Submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</main>
