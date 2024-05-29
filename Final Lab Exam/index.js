@@ -72,7 +72,7 @@ server.get("/add-to-cart/:id", async (req, res) => {
 server.get("/featured-products/:id", async (req, res) => {
     featured_id = req.params.id;
     featuredProducts = await FeaturedProduct.find();
-    let viewed = req.cookies?.viewed;
+    let viewed = req.session.viewed;
     if (!viewed) viewed = [];
     if (!viewed.includes(req.params.id)) {
         viewed.push(req.params.id);
@@ -82,7 +82,7 @@ server.get("/featured-products/:id", async (req, res) => {
 
 server.get("/viewed-products", checkAuth, async (req, res) => {
     featuredProducts = await FeaturedProduct.find();
-    let viewed = req.cookies?.viewed;
+    let viewed = req.session.viewed;
     if (!viewed) viewed = [];
     if (!viewed.includes(req.params.id)) {
         viewed.push(req.params.id);
