@@ -260,3 +260,13 @@ a.link-to-page:hover {
     color: red;
     font-size: large;
 }
+
+#featured {
+    padding: 100px, 0;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;   
+}

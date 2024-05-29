@@ -13,6 +13,7 @@ const checkAdmin = require("./middlewares/check-admin");
 const jwtAuthentication = require("./middlewares/jwt-authentication");
 const Product = require("./models/Product");
 const User = require("./models/User");
+const FeaturedProduct = require("./models/FeaturedProducts");
 const router = require("./routes/api/products");
 
 dotenv.config();
@@ -68,6 +69,27 @@ server.get("/add-to-cart/:id", async (req, res) => {
     return res.redirect("/products");
 });
 
+server.get("/featured-products/:id", async (req, res) => {
+    featured_id = req.params.id;
+    featuredProducts = await FeaturedProduct.find();
+    let viewed = req.cookies?.viewed;
+    if (!viewed) viewed = [];
+    if (!viewed.includes(req.params.id)) {
+        viewed.push(req.params.id);
+    }
+    res.render("featured-products", {featured_id, featuredProducts});
+});
+
+server.get("/viewed-products", checkAuth, async (req, res) => {
+    featuredProducts = await FeaturedProduct.find();
+    let viewed = req.cookies?.viewed;
+    if (!viewed) viewed = [];
+    if (!viewed.includes(req.params.id)) {
+        viewed.push(req.params.id);
+    }
+    res.render("viewed-products", {viewed, featuredProducts});
+});
+
 server.get("/register", async (req, res) => {
     res.render("register");
 });
@@ -109,7 +131,8 @@ server.get("/:page?", async (req, res) => {
     let totalProducts = await Product.countDocuments();
     let totalPages = Math.ceil(totalProducts / pageSize);
     let products = await Product.find().limit(pageSize).skip(skip);
-    res.render("homepage", {products, page, pageSize, totalProducts, totalPages});
+    let featuredProducts = await FeaturedProduct.find();
+    res.render("homepage", {products, featuredProducts, page, pageSize, totalProducts, totalPages});
 });
 
 server.listen(4000, function() {

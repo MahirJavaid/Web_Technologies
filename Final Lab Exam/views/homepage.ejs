@@ -78,6 +78,28 @@
             </div>
         </div>
     </section>
+    <section id="featured">
+        <div class="container">
+            <div class="title">
+                <h1>Featured Products</h1>
+            </div>
+            <div class="featured-products">
+                <% for( let i = 0; i < featuredProducts.length; i++ ) { %>
+                    <% if(featuredProducts[i].isFeatured) { %>
+                        <div class="card">
+                            <h3><%= featuredProducts[i].name %></h3>
+                            <p><%= featuredProducts[i].description %></p>
+                            <p><%= featuredProducts[i].price %></p>
+                            <form action="/featured-products/<%= featuredProducts[i].id %>" method="GET">
+                                <button class="mybtn" type="submit">View Details</button>
+                            </form>
+                            <!-- <button class="mybtn" type="submit"><a class="btn-link" href="/featured-products/">View Details</a></button> -->
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
     <section id="blog">
         <div class="container">
             <div class="title">

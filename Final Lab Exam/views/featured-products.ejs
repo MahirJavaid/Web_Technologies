@@ -1,0 +1,23 @@
+<main>
+    <section id="about-us" class="first-section">
+        <div class="container">
+            <div class="title">
+                <h1>Detailed Description of Featured Product</h1>
+            </div>
+            <div class="products">
+                <% for( let i = 0; i < featuredProducts.length; i++ ) { %>
+                    <% if(featuredProducts[i].isFeatured) { %>
+                        <% if(featuredProducts[i].id == featured_id) { %>
+                            <div class="card">
+                                <h3><b>Name:</b> <%= featuredProducts[i].name %></h3>
+                                <p><b>Description:</b> <%= featuredProducts[i].description %></p>
+                                <p><b>Price:</b> <%= featuredProducts[i].price %></p>
+                                <p><b>Category:</b> <%= featuredProducts[i].category %></p>
+                            </div>
+                        <% } %>
+                    <% } %>
+                <% } %>
+            </div>           
+        </div>
+    </section>
+</main>
