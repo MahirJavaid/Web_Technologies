@@ -70,7 +70,6 @@ function handleSubmission(event) {
         $.ajax({
             url: "https://usmanlive.com/wp-json/api/stories/" + storyId,
             method: "PUT",
-      
             data: { title, content },
             success: function () {
                 display();

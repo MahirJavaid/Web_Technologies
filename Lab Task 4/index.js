@@ -63,7 +63,7 @@ server.get("/add-to-cart/:id", async (req, res) => {
         cart.push(req.params.id);
     }
     res.cookie("cart", cart);
-  
+
     // return res.send(req.cookies);
     return res.redirect("/products");
 });
